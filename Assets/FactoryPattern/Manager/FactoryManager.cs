@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,10 @@ namespace DesignPattern
 {
     public class FactoryManager : PersistenceSingleton<FactoryManager>
     {
-       private static Dictionary<string, Factory> _factories = new ();
+       private static Dictionary<string,Func<Factory>> _factories = new ();
        
-       public static void RegisterFactory(string enemyType, Factory factory)
+       
+       public static void RegisterFactory(string enemyType, Func<Factory> factory)
        {
            if (!_factories.ContainsKey(enemyType))
            {
@@ -18,9 +20,10 @@ namespace DesignPattern
        
        public static IEnemy GetEnemy(string enemyType, Vector3 position)
        {
-           if (_factories.ContainsKey(enemyType))
+           if (_factories.TryGetValue(enemyType, out var factoryCreator))
            {
-               return _factories[enemyType].GetProduct(position);
+               Factory factory = factoryCreator.Invoke();
+               return factory.GetProduct(position);
            }
            
            return null;

@@ -355,6 +355,11 @@
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Command/Client/PlayerInput.cs"
+"Assets/Command/Command/ICommand.cs"
+"Assets/Command/Command/MoveCommand.cs"
+"Assets/Command/Invoker/CommandInvoker.cs"
+"Assets/Command/Reciver/PlayerMover.cs"
 "Assets/FactoryPattern/Base/Factory.cs"
 "Assets/FactoryPattern/Concrete/FactoryGhost.cs"
 "Assets/FactoryPattern/Concrete/FactoryZombie.cs"
@@ -365,6 +370,12 @@
 "Assets/Singleton/PersistenceSingleton.cs"
 "Assets/Singleton/SimpleSingleton.cs"
 "Assets/Singleton/Singleton.cs"
+"Assets/State/Abstract/StateMachineBase.cs"
+"Assets/State/Concrete/AttackState.cs"
+"Assets/State/Concrete/IdleState.cs"
+"Assets/State/Concrete/MoveState.cs"
+"Assets/State/Interface/IState.cs"
+"Assets/State/PlayerControllerSM.cs"
 -langversion:9.0
 
 /deterministic

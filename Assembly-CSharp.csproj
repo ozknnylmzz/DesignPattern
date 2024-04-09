@@ -41,16 +41,27 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/FactoryPattern/Interface/IEnemy.cs" />
-     <Compile Include="Assets/FactoryPattern/Base/Factory.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/Zombie.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/Ghost.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/FactoryGhost.cs" />
      <Compile Include="Assets/FactoryPattern/Concrete/FactoryZombie.cs" />
-     <Compile Include="Assets/FactoryPattern/Manager/FactoryManager.cs" />
-     <Compile Include="Assets/Singleton/SimpleSingleton.cs" />
      <Compile Include="Assets/Singleton/Singleton.cs" />
+     <Compile Include="Assets/FactoryPattern/Base/Factory.cs" />
      <Compile Include="Assets/Singleton/PersistenceSingleton.cs" />
+     <Compile Include="Assets/FactoryPattern/Interface/IEnemy.cs" />
+     <Compile Include="Assets/Command/Command/ICommand.cs" />
+     <Compile Include="Assets/State/Concrete/AttackState.cs" />
+     <Compile Include="Assets/Command/Invoker/CommandInvoker.cs" />
+     <Compile Include="Assets/Singleton/SimpleSingleton.cs" />
+     <Compile Include="Assets/Command/Command/MoveCommand.cs" />
+     <Compile Include="Assets/FactoryPattern/Manager/FactoryManager.cs" />
+     <Compile Include="Assets/State/Concrete/MoveState.cs" />
+     <Compile Include="Assets/FactoryPattern/Concrete/FactoryGhost.cs" />
+     <Compile Include="Assets/State/Interface/IState.cs" />
+     <Compile Include="Assets/Command/Reciver/PlayerMover.cs" />
+     <Compile Include="Assets/Command/Client/PlayerInput.cs" />
+     <Compile Include="Assets/State/Concrete/IdleState.cs" />
+     <Compile Include="Assets/FactoryPattern/Concrete/Ghost.cs" />
+     <Compile Include="Assets/State/PlayerControllerSM.cs" />
+     <Compile Include="Assets/FactoryPattern/Concrete/Zombie.cs" />
+     <Compile Include="Assets/State/Abstract/StateMachineBase.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
