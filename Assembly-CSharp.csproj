@@ -41,27 +41,58 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/FactoryPattern/Concrete/FactoryZombie.cs" />
+     <Compile Include="Assets/Factory/Concrete/FactoryZombie.cs" />
      <Compile Include="Assets/Singleton/Singleton.cs" />
-     <Compile Include="Assets/FactoryPattern/Base/Factory.cs" />
+     <Compile Include="Assets/Factory/Base/Factory.cs" />
      <Compile Include="Assets/Singleton/PersistenceSingleton.cs" />
-     <Compile Include="Assets/FactoryPattern/Interface/IEnemy.cs" />
+     <Compile Include="Assets/Factory/Interface/IEnemy.cs" />
+     <Compile Include="Assets/Strategy/AbilityStrategy.cs" />
      <Compile Include="Assets/Command/Command/ICommand.cs" />
      <Compile Include="Assets/State/Concrete/AttackState.cs" />
      <Compile Include="Assets/Command/Invoker/CommandInvoker.cs" />
      <Compile Include="Assets/Singleton/SimpleSingleton.cs" />
+     <Compile Include="Assets/Strategy/MeleeAbility.cs" />
+     <Compile Include="Assets/State/Abstract/StateMachineBase.cs" />
      <Compile Include="Assets/Command/Command/MoveCommand.cs" />
-     <Compile Include="Assets/FactoryPattern/Manager/FactoryManager.cs" />
+     <Compile Include="Assets/Strategy/FireBallAbility.cs" />
+     <Compile Include="Assets/Builder/Director.cs" />
+     <Compile Include="Assets/Builder/Car.cs" />
+     <Compile Include="Assets/Factory/Manager/FactoryManager.cs" />
+     <Compile Include="Assets/Strategy/SpellsUI.cs" />
      <Compile Include="Assets/State/Concrete/MoveState.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/FactoryGhost.cs" />
+     <Compile Include="Assets/Factory/Concrete/FactoryGhost.cs" />
      <Compile Include="Assets/State/Interface/IState.cs" />
      <Compile Include="Assets/Command/Reciver/PlayerMover.cs" />
+     <Compile Include="Assets/Strategy/HealAbility.cs" />
      <Compile Include="Assets/Command/Client/PlayerInput.cs" />
+     <Compile Include="Assets/Strategy/AbilityChanger.cs" />
      <Compile Include="Assets/State/Concrete/IdleState.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/Ghost.cs" />
+     <Compile Include="Assets/Factory/Concrete/Ghost.cs" />
      <Compile Include="Assets/State/PlayerControllerSM.cs" />
-     <Compile Include="Assets/FactoryPattern/Concrete/Zombie.cs" />
-     <Compile Include="Assets/State/Abstract/StateMachineBase.cs" />
+     <Compile Include="Assets/Factory/Concrete/Zombie.cs" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <None Include="Assets/Builder/Models/Car Mechanic/RCK 2.3/Standard Assets/Projectors/Sources/Shaders/Projector Multiply.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -710,6 +741,9 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Sysroot.Linux_x86_64">
+     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
@@ -743,14 +777,17 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Services.Core">
-     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Toolchain.Macos-arm64-Linux-x86_64">
+     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Toolchain.Macos-arm64-Linux-x86_64.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
@@ -769,6 +806,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.SysrootPackage.Editor">
+     <HintPath>/Users/apple/Documents/DesignPattern/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{7D7E9693-3554-CDB7-F023-AEE40A34B392}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Builder/Car.cs">
+    <Files>
+      <File FileName="Assets/Builder/Director.cs" Line="19" Column="52" />
+      <File FileName="Assets/Builder/Car.cs" Line="10" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DesignPattern" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Builder" expanded="True">
+                <Node name="Car.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="09e47142-92bb-4fc7-b08d-045adc90e698" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

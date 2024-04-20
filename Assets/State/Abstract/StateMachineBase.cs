@@ -6,8 +6,6 @@ namespace DesignPattern.State
     {
         public IState CurrentState;
 
-      
-
         private void Update()
         {
             if (CurrentState!=null)
