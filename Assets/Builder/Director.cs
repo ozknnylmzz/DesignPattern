@@ -1,33 +1,62 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DesignPattern.Buiilder
 {
     public class Director : MonoBehaviour
     {
-        public static Action<int> OnSetModel;
-        public static Action<int> OnSetGlass;
-        private void Awake()
+        [SerializeField] private  GameObject[] _models;
+        [SerializeField] private  GameObject[] _wheels;
+        [SerializeField] private GameObject[] _glasses;
+        public GameObject[] Models => _glasses;
+        public GameObject[] Wheels => _wheels;
+        public GameObject[] Glasses => _glasses;
+        
+        private GameObject _selectedModel;
+        private GameObject _selectedWheel;
+        private GameObject _selectedGlass;
+
+
+        private void Start()
         {
+            SetModel(0);
+        }
+
+        public void SetModel(int modelIndex)
+        {
+            if (_selectedModel!=null)
+            {
+                Destroy(_selectedModel);
+            }
             
+            _selectedModel = Instantiate(_models[modelIndex]);
+            _selectedWheel = Instantiate(_wheels[modelIndex],_selectedModel.transform);
+            _selectedGlass = Instantiate(_glasses[modelIndex],_selectedModel.transform);
+            
+            new CarBuilder(_selectedModel).WithGlass(_selectedWheel).WithWheel(_selectedGlass).Build();
         }
 
-        private void OnEnable()
+        public void SetGlass(int glassIndex)
         {
-            OnSetGlass = new Action<int>(SetGlass);
+            if (glassIndex>Glasses.Length || glassIndex < 0) { return; }
+
+            Destroy(_selectedGlass);
+            
+            _selectedGlass = Instantiate(Glasses[glassIndex],_selectedModel.transform);
+
         }
-
-
-        private void SetGlass(int glassIndex)
+        public void SetWheel(int wheelIndex)
         {
-            //if (_wheels != null
-            //{
-            //    Destroy(_wheels);
-            //}
+            if (wheelIndex>Wheels.Length || wheelIndex < 0) { return; }
 
-            //_wheels = Instantiate(_selectedCar.CarBuilderData.CarBuilder.Glass[glassIndex]);
+            Destroy(_selectedWheel);
+            
+            _selectedWheel = Instantiate(Wheels[wheelIndex],_selectedModel.transform);
+
         }
         
     }

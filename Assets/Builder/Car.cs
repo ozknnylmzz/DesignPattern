@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Car : MonoBehaviour
 {
+    public GameObject Model;
+    public GameObject Wheel;
+    public GameObject Glasses;
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string ModelName;
+    public float Speed;
+    public float Acceleration;
 }
+
