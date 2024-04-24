@@ -117,6 +117,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"/Applications/Unity/Hub/Editor/2021.3.10f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
@@ -329,6 +330,12 @@
 -r:"/Users/apple/Documents/DesignPattern/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"/Users/apple/Documents/DesignPattern/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"/Users/apple/Documents/DesignPattern/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
+-r:"Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll"
+-r:"Library/Bee/artifacts/200b0aEDbg.dag/Assembly-CSharp-firstpass.ref.dll"
+-r:"Library/Bee/artifacts/200b0aEDbg.dag/ScriptableObject-Architecture.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aEDbg.dag/ScriptableObject-Architecture.ref.dll"
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aEDbg.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -376,6 +383,8 @@
 "Assets/Factory/Concrete/Zombie.cs"
 "Assets/Factory/Interface/IEnemy.cs"
 "Assets/Factory/Manager/FactoryManager.cs"
+"Assets/MVP/Health.cs"
+"Assets/MVP/HealthPresenter.cs"
 "Assets/Singleton/PersistenceSingleton.cs"
 "Assets/Singleton/SimpleSingleton.cs"
 "Assets/Singleton/Singleton.cs"

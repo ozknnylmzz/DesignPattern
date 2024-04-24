@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 147148060}
   - component: {fileID: 147148061}
   m_Layer: 0
-  m_Name: BuilderManager
+  m_Name: Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   _glass:
   - {fileID: 987538663}
   - {fileID: 183527079}
-  _director: {fileID: 0}
+  _director: {fileID: 147148061}
 --- !u!4 &395568048
 Transform:
   m_ObjectHideFlags: 0
